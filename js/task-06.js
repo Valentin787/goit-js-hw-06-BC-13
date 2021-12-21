@@ -5,7 +5,8 @@ const refs = {
 const onInputValue = (event) => {
   refs.input.classList.add("invalid");
 
-  if (event.currentTarget.value.length >= refs.input.dataset.length) {
+  if (event.currentTarget.value.length === +refs.input.dataset.length) {
+
     refs.input.classList.remove("invalid");
     refs.input.classList.add("valid");
   };
